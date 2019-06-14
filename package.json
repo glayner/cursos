@@ -1,0 +1,20 @@
+{
+  "name": "exercicios-web",
+  "version": "1.0.0",
+  "description": "exercícios do curso de Web Moderno pela Cod3r",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glayner/exercicios-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glayner/exercicios-web/issues"
+  },
+  "homepage": "https://github.com/glayner/exercicios-web#readme"
+}
