@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function calculo(n1, n2, n3, res) {
+            let valor1 = parseInt(document.getElementById(`${n1}`).value, 10) > 10 ? 10 : parseInt(document.getElementById(`${n1}`).value, 10) 
+            let valor2 = parseInt(document.getElementById(`${n2}`).value, 10) > 10 ? 10 : parseInt(document.getElementById(`${n2}`).value, 10) 
+            let valor3 = parseInt(document.getElementById(`${n3}`).value, 10) > 10 ? 10 : parseInt(document.getElementById(`${n3}`).value, 10) 
+
+            let num1 = valor1 ? valor1 : 0
+            let num2 = valor2 ? valor2 : 0
+            let num3 = valor3 ? valor3 : 0
+
+            document.getElementById(`${res}`).value = (num1 + num2 + num3) / 3;
+        }
+        function calcular() {
+            calculo('p1-a1', 'p2-a1', 'exm-a1', 'res-a1')
+            calculo('p1-a2', 'p2-a2', 'exm-a2', 'res-a2')
+            calculo('p1-a3', 'p2-a3', 'exm-a3', 'res-a3')
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <h1>lançamento de notas</h1>
+        <br><br>
+        selecione a diciplina
+        <select name='diciplina'>
+            <option value=""></option>
+            <option value="int-inf">introdução a informatica</option>
+            <option value="ling-prog">linguagens de programação</option>
+            <option value="prog-comp">Programação de computadores</option>
+        </select>
+
+
+        <table>
+            <tr>
+                <td>Nome do aluno</td>
+                <td>Prova 1</td>
+                <td>Prova 2</td>
+                <td>Exame</td>
+                <td>Média</td>
+                <td>Faltas</td>
+            </tr>
+            <tr>
+                <td>Joana da silva</td>
+                <td><input type="number" id='p1-a1' min="0" max="10" required></td>
+                <td><input type="number" id='p2-a1' min="0" max="10" required></td>
+                <td><input type="number" id='exm-a1' min="0" max="10"></td>
+                <td><input type="text" readonly size="4" id='res-a1'></td>
+                <td><input type="number" id='falt-a1' min="0" max="16" required></td>
+            </tr>
+            <tr>
+                <td>Maria do socorro</td>
+                <td><input type="number" id='p1-a2' min="0" max="10" required></td>
+                <td><input type="number" id='p2-a2' min="0" max="10" required></td>
+                <td><input type="number" id='exm-a2' min="0" max="10"></td>
+                <td><input type="text" readonly size="4" id='res-a2'></td>
+                <td><input type="number" id='falt-a2' min="0" max="16" required></td>
+            </tr>
+            <tr>
+                <td>Pedro Santos</td>
+                <td><input type="number" id='p1-a3' min="0" max="10" required></td>
+                <td><input type="number" id='p2-a3' min="0" max="10" required></td>
+                <td><input type="number" id='exm-a3' min="0" max="10"></td>
+                <td><input type="text" readonly size="4" id='res-a3'></td>
+                <td><input type="number" id='falt-a3' min="0" max="16" required></td>
+            </tr>
+        </table>
+        <button type="button" onclick=calcular()>Calcular</button> <input type="reset" value="Limpar">
+    </form>
+
+</body>
+
+</html>
